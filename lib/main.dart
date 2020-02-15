@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:vthacks7/text_section.dart';
+import 'package:vthacks7/alerts_section.dart';
 import 'package:flutter/services.dart';
+import 'package:vthacks7/recurring_transactions.dart';
 
 
 void main() => runApp(MyApp());
@@ -92,8 +93,8 @@ class MainApp extends StatelessWidget {
                 ),
             ]
           ),
-          TextSection("Alerts"),
-          TextSection("Recurring Transactions"),
+          AlertsSection("Alerts"),
+          RecurringTransactions("Recurring Transactions"),
         ],
       )
       //body: LayoutStarts(),

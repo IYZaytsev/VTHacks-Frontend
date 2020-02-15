@@ -27,11 +27,29 @@ class MainApp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         titleSpacing: -30.0,
-        title: Text(
-          'Hi, ${name}!',
+        title: RichText(
+          text: TextSpan(
+            text: 'Hi, ',
             style: TextStyle(
-              fontSize: 32,
-            ),
+              color: Colors.white,
+              fontSize: 32),
+              children: <TextSpan>[
+                TextSpan(text: 'Adi',
+                  style: TextStyle(
+                    color: Color(0xFF69F0AE),
+                    fontSize: 32,
+                  ),
+                  children: <TextSpan> [
+                    TextSpan(text: '!',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 32,
+                      ),
+                    ),
+                  ]
+                )
+              ]
+          ),
         ),
         elevation: 0.0,
         backgroundColor: Color(0xFF2962FF),

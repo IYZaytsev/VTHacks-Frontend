@@ -15,6 +15,7 @@ class TextSection extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           const ListTile(
+            contentPadding: EdgeInsets.fromLTRB(0.0, 20.0, 0.0, 0.0),
             leading: Icon(Icons.attach_money),
             title: Text('Xfinity'),
             subtitle: Text('Every month'),
@@ -23,10 +24,13 @@ class TextSection extends StatelessWidget {
       ),
     ),
     Positioned(
-      top: 0,
-      left: 0,
+      top: 10,
+      left: 10,
       child: Text(
-        _title
+        _title,
+        style: TextStyle(
+          fontSize: 20.0,
+        ),
       ),
     ),
       ]

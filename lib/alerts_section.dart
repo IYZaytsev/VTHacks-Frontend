@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:vthacks7/main.dart';
+import 'package:vthacks7/src/jsonpayload.dart';
 
 class AlertsSection extends StatelessWidget {
   final String _title;
+  List<Alerts> alist;
   static const double _hPad = 16.0;
-
-  AlertsSection(this._title);
+  List<Widget> allAlerts;
+  AlertsSection(this._title, this.allAlerts);
 
   @override
   Widget build(BuildContext context) {
@@ -13,34 +16,22 @@ class AlertsSection extends StatelessWidget {
         Card(
       child: Column(
         mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          const ListTile(
-            contentPadding: EdgeInsets.fromLTRB(10.0, 40.0, 0.0, 0.0),
-            leading: Icon(Icons.attach_money),
-            title: Text('Xfinity'),
-            subtitle: Text('Every month'),
-          ),
-          const ListTile(
-            contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 0.0),
-            leading: Icon(Icons.attach_money),
-            title: Text('Netflix'),
-            subtitle: Text('Every month'),
-          ),
-        ],
+        children: allAlerts,
       ),
     ),
-    Positioned(
-      top: 15,
-      left: 20,
-      child: Text(
-        _title,
-        style: TextStyle(
-          fontSize: 20.0,
-         color: Color(0xFF2962FF),
+    Container(
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(20.0, 10.0, 20.0, 20.0),
+        child: Text(
+          _title,
+            style: TextStyle(
+              fontSize: 20.0,
+              color: Color(0xFF2962FF),
+            ),
         ),
-      ),
+        ),
     ),
-      ]
+    ]
   );
   }
 }

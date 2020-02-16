@@ -44,7 +44,7 @@ class MainApp extends StatelessWidget {
   
     //This Loops creates the ListTile object for the Alerts from the Json Data
     for(var i = 0; i < alist.length; i++){
-      var oldPrice = alist[i].Oldprice;
+      var newPrice = alist[i].Newprice;
       var change = alist[i].Newprice - alist[i].Oldprice;
       var changeString = "\$" + change.toString();
       allAlerts.add(new ListTile(
@@ -58,8 +58,9 @@ class MainApp extends StatelessWidget {
             )),
             subtitle: RichText(
           text: TextSpan(
-            text: '\$$oldPrice \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t',
+            text: '\$$newPrice \t \t \t \t \t \t \t \t \t \t \t \t \t \t \t',
             style: TextStyle(
+              fontWeight: FontWeight.bold,
               color: Colors.grey,
             ),
               children: <TextSpan>[
@@ -89,6 +90,7 @@ class MainApp extends StatelessWidget {
               text: TextSpan(
                 text: 'Every month \t \t \t \t \t \t \t \t \t \t',
                   style: TextStyle(
+                    fontWeight: FontWeight.bold,
                     color: Colors.grey,
                   ),
                   children: <TextSpan> [

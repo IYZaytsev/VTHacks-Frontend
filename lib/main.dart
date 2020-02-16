@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:vthacks7/alerts_section.dart';
 import 'package:flutter/services.dart';
@@ -34,7 +36,7 @@ class MainApp extends StatelessWidget {
               color: Colors.white,
               fontSize: 32),
               children: <TextSpan>[
-                TextSpan(text: 'Adi',
+                TextSpan(text: '$name',
                   style: TextStyle(
                     color: Color(0xFF69F0AE),
                     fontSize: 32,
@@ -59,19 +61,14 @@ class MainApp extends StatelessWidget {
 
         actions: <Widget>[
           Container(
-            margin: EdgeInsets.only(right: 20),
-            child: Icon(
-              Icons.text_format,
+            margin: EdgeInsets.only(right: 15),
+            child: IconButton(
+              icon: Icon(Icons.power_settings_new),
               color: Color(0xFF69F0AE),
+              onPressed: () => exit(0),
+              tooltip: 'Close app',
               ),
-          ),
-          Container(
-            margin: EdgeInsets.only(right: 25),
-            child: Icon(
-              Icons.power_settings_new,
-              color: Color(0xFF69F0AE),
-              ),
-          )
+            )
         ],
       ),
       backgroundColor: Color(0xFF2962FF),

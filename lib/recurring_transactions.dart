@@ -29,7 +29,7 @@ class RecurringTransactions extends StatelessWidget {
           const ListTile(
             contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 0.0),
             leading: Icon(Icons.attach_money),
-            title: Text('Iphone 11 Financing'),
+            title: Text('iPhone 11 Financing'),
             subtitle: Text('Every month'),
           ),
           const ListTile(

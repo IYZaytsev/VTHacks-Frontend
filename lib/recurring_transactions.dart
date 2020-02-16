@@ -44,6 +44,12 @@ class RecurringTransactions extends StatelessWidget {
             title: Text('Spotify'),
             subtitle: Text('Every month'),
           ),
+          const ListTile(
+            contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 0.0, 0.0),
+            leading: Icon(Icons.attach_money),
+            title: Text('Crunchyroll'),
+            subtitle: Text('Every month'),
+          ),
         ],
       ),
     ),

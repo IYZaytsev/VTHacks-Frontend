@@ -75,9 +75,7 @@ class MainApp extends StatelessWidget {
         ],
       ),
       backgroundColor: Color(0xFF2962FF),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
+      body: ListView(
         children: [
           Container(
                 padding: const EdgeInsets.fromLTRB(16.0, 32.0, 16.0, 4.0),
